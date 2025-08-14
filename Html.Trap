@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Da Trappa Mann | Official Artist Hub</title>
+  <meta name="description" content="Da Trappa Mann - Real Rap. Real Hustle. Real Vision. Listen to the latest tracks, join the newsletter, and connect on social media.">
+  
+  <!-- Open Graph tags for social media -->
+  <meta property="og:title" content="Da Trappa Mann | Official Artist Hub">
+  <meta property="og:description" content="Da Trappa Mann - Real Rap. Real Hustle. Real Vision. Listen to the latest tracks and join the movement.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://datrappamann.com">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'trappa-pink': '#ff4081',
+            'dark-bg': '#121212',
+            'dark-card': '#1e1e1e'
+          },
+          fontFamily: {
+            'display': ['Inter', 'system-ui', 'sans-serif']
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-20px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #121212;
+      color: white;
+    }
+    
+    .gradient-overlay {
+      background: linear-gradient(135deg, rgba(255, 64, 129, 0.2) 0%, rgba(18, 18, 18, 0.8) 100%);
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .success-message {
+      background-color: #10b981;
+      color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+      display: none;
+    }
+    
+    .error-message {
+      background-color: #ef4444;
+      color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-dark-bg/95 backdrop-blur-sm z-50 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <span class="text-xl font-bold text-trappa-pink">Da Trappa Mann</span>
+        </div>
+        
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8">
+            <a href="#home" class="text-gray-300 hover:text-trappa-pink transition-colors duration-300">Home</a>
+            <a href="#about" class="text-gray-300 hover:text-trappa-pink transition-colors duration-300">About</a>
+            <a href="#music" class="text-gray-300 hover:text-trappa-pink transition-colors duration-300">Music</a>
+            <a href="#newsletter" class="text-gray-300 hover:text-trappa-pink transition-colors duration-300">Newsletter</a>
+            <a href="#contact" class="text-gray-300 hover:text-trappa-pink transition-colors duration-300">Contact</a>
+          </div>
+        </div>
+        
+        <div class="md:hidden">
+          <button type="button" class="text-gray-300 hover:text-trappa-pink" onclick="toggleMobileMenu()">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden bg-dark-card border-t border-gray-800 hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-trappa-pink w-full text-left">Home</a>
+        <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-trappa-pink w-full text-left">About</a>
+        <a href="#music" class="block px-3 py-2 text-gray-300 hover:text-trappa-pink w-full text-left">Music</a>
+        <a href="#newsletter" class="block px-3 py-2 text-gray-300 hover:text-trappa-pink w-full text-left">Newsletter</a>
+        <a href="#contact" class="block px-3 py-2 text-gray-300 hover:text-trappa-pink w-full text-left">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div 
+      class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style="background-image: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
+    ></div>
+    <div class="absolute inset-0 gradient-overlay"></div>
+    
+    <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <div class="animate-float">
+        <h1 class="text-5xl sm:text-6xl lg:text-8xl font-black text-white mb-6 leading-tight">
+          Da Trappa Mann
+        </h1>
+        <p class="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-8 font-light">
+          Real Rap. Real Hustle. Real Vision.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a 
+            href="https://datrappamann.bandcamp.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center px-8 py-4 bg-trappa-pink text-white font-semibold rounded-full hover:bg-pink-500 transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+            </svg>
+            Listen on Bandcamp
+          </a>
+          <button 
+            onclick="showEmailModal()"
+            class="inline-flex items-center px-8 py-4 border-2 border-trappa-pink text-trappa-pink font-semibold rounded-full hover:bg-trappa-pink hover:text-white transition-all duration-300 transform hover:scale-105"
+          >
+            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            Join Newsletter
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-dark-card">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl sm:text-5xl font-bold text-trappa-pink mb-6">
+          About Da Trappa Mann
+        </h2>
+        <div class="w-24 h-1 bg-trappa-pink mx-auto mb-8"></div>
+      </div>
+      
+      <div class="bg-dark-bg rounded-2xl p-8 sm:p-12 shadow-2xl">
+        <p class="text-lg sm:text-xl text-gray-300 leading-relaxed text-center">
+          Da Trappa Mann is a boundary-pushing hip-hop artist blending raw street narratives with masterful lyricism. 
+          Repping the West with an unmistakable sound, he fuses classic hustle mentality with modern flows, 
+          delivering music that's both gritty and thought-provoking. A student of the game, he's building an empire—one bar, 
+          one move at a time. <span class="text-trappa-pink font-semibold">Da Wrld Iz Urs.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Music Section -->
+  <section id="music" class="py-20 bg-dark-bg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl sm:text-5xl font-bold text-trappa-pink mb-6">
+          Latest Release
+        </h2>
+        <div class="w-24 h-1 bg-trappa-pink mx-auto mb-8"></div>
+      </div>
+      
+      <div class="flex justify-center">
+        <div class="bg-dark-card rounded-3xl overflow-hidden shadow-2xl max-w-md w-full transform hover:scale-105 transition-all duration-300">
+          <!-- Album cover -->
+          <div class="aspect-square bg-gradient-to-br from-trappa-pink via-purple-600 to-dark-bg flex items-center justify-center">
+            <div class="text-center p-8">
+              <svg class="w-16 h-16 text-white mb-4 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM15.657 6.343a1 1 0 011.414 0A9.972 9.972 0 0119 12a9.972 9.972 0 01-1.929 5.657 1 1 0 11-1.414-1.414A7.971 7.971 0 0017 12c0-1.521-.426-2.94-1.172-4.172a1 1 0 010-1.414z" clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M13.828 7.172a1 1 0 011.414 0A5.983 5.983 0 0117 12a5.983 5.983 0 01-1.758 4.828 1 1 0 11-1.414-1.414A3.987 3.987 0 0015 12a3.987 3.987 0 00-1.172-2.828 1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+              <h3 class="text-xl font-bold text-white">Album Artwork</h3>
+            </div>
+          </div>
+          
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-white mb-3">
+              Don't Hate the Player, Learn the Game Vol 1
+            </h3>
+            <div class="space-y-2 mb-6">
+              <p class="text-gray-400 flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Released: February 2025
+              </p>
+              <p class="text-gray-400 flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                </svg>
+                Price: $7 USD or more
+              </p>
+            </div>
+            <a 
+              href="https://datrappamann.bandcamp.com/album/dont-hate-the-player-learn-the-game-vol-1" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="block w-full text-center py-4 bg-trappa-pink text-white font-semibold rounded-full hover:bg-pink-500 transition-colors duration-300 transform hover:scale-105"
+            >
+              <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 7m0 0L5.4 5M7 13L5.4 5m0 0L3 3m4 10v6a1 1 0 001 1h6a1 1 0 001-1v-6M9 17h6" />
+              </svg>
+              Buy on Bandcamp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section id="newsletter" class="py-20 bg-gradient-to-r from-trappa-pink to-purple-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">
+        Stay Connected
+      </h2>
+      <p class="text-xl text-white/90 mb-12">
+        Get the latest tracks, behind-the-scenes content, and exclusive updates straight to your inbox.
+      </p>
+      
+      <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 sm:p-12 max-w-2xl mx-auto">
+        <form id="newsletter-form" onsubmit="submitNewsletter(event)" class="space-y-6">
+          <div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+              required
+              class="w-full px-6 py-4 bg-white/20 border border-white/30 rounded-full text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent backdrop-blur-sm"
+            />
+          </div>
+          
+          <div>
+            <input
+              type="text"
+              name="firstName"
+              placeholder="First Name (Optional)"
+              class="w-full px-6 py-4 bg-white/20 border border-white/30 rounded-full text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent backdrop-blur-sm"
+            />
+          </div>
+          
+          <button
+            type="submit"
+            class="w-full py-4 bg-white text-trappa-pink font-bold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+            Subscribe to Newsletter
+          </button>
+          
+          <div id="newsletter-success" class="success-message">
+            Successfully subscribed! Welcome to the movement.
+          </div>
+          <div id="newsletter-error" class="error-message">
+            Failed to subscribe. Please try again.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer/Contact Section -->
+  <footer id="contact" class="bg-dark-card py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-trappa-pink mb-6">
+          Connect With Da Trappa Mann
+        </h2>
+        <div class="w-24 h-1 bg-trappa-pink mx-auto mb-8"></div>
+      </div>
+      
+      <!-- Social Media Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+        <a 
+          href="https://www.instagram.com/whoisdatrappamann/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex flex-col items-center p-6 bg-dark-bg rounded-2xl hover:bg-trappa-pink/10 transition-all duration-300 transform hover:scale-105 group"
+        >
+          <svg class="w-8 h-8 text-trappa-pink group-hover:text-white mb-3" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.042-3.441.219-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.562-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.888-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.357-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+          </svg>
+          <span class="text-sm text-gray-400 group-hover:text-white">Instagram</span>
+        </a>
+        
+        <a 
+          href="https://twitter.com/Whodatrapperman" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex flex-col items-center p-6 bg-dark-bg rounded-2xl hover:bg-trappa-pink/10 transition-all duration-300 transform hover:scale-105 group"
+        >
+          <svg class="w-8 h-8 text-trappa-pink group-hover:text-white mb-3" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+          </svg>
+          <span class="text-sm text-gray-400 group-hover:text-white">Twitter</span>
+        </a>
+        
+        <a 
+          href="https://www.tiktok.com/@da.trappa.mann" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex flex-col items-center p-6 bg-dark-bg rounded-2xl hover:bg-trappa-pink/10 transition-all duration-300 transform hover:scale-105 group"
+        >
+          <svg class="w-8 h-8 text-trappa-pink group-hover:text-white mb-3" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+          </svg>
+          <span class="text-sm text-gray-400 group-hover:text-white">TikTok</span>
+        </a>
+        
+        <a 
+          href="https://unitedmasters.com/dawrldizurstrappamann" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex flex-col items-center p-6 bg-dark-bg rounded-2xl hover:bg-trappa-pink/10 transition-all duration-300 transform hover:scale-105 group"
+        >
+          <svg class="w-8 h-8 text-trappa-pink group-hover:text-white mb-3" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+          </svg>
+          <span class="text-sm text-gray-400 group-hover:text-white">UnitedMasters</span>
+        </a>
+        
+        <a 
+          href="https://www.youtube.com/channel/UCoXB2wdm5m-POUpSD6OBopQ" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex flex-col items-center p-6 bg-dark-bg rounded-2xl hover:bg-trappa-pink/10 transition-all duration-300 transform hover:scale-105 group"
+        >
+          <svg class="w-8 h-8 text-trappa-pink group-hover:text-white mb-3" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          <span class="text-sm text-gray-400 group-hover:text-white">YouTube</span>
+        </a>
+        
+        <a 
+          href="https://www.reverbnation.com/artist/video/17495827" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex flex-col items-center p-6 bg-dark-bg rounded-2xl hover:bg-trappa-pink/10 transition-all duration-300 transform hover:scale-105 group"
+        >
+          <svg class="w-8 h-8 text-trappa-pink group-hover:text-white mb-3" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M2 12C2 6.48 6.48 2 12 2s10 4.4
